@@ -48,3 +48,22 @@
 #        n += 1
 #print (s/n)
 ##########################################
+#s = input()
+#s = s.lower()
+#print ((((s.count('c') + (s.count('g')))) / len(s)) * 100)
+##########################################
+s = input()
+print (s.count(s[1]))
+k = 0
+while k < len{s}:
+    if s[k] == s [k+1]:
+
+print (n)
+
+
+
+
+
+
+
+
