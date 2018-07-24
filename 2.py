@@ -52,34 +52,23 @@
 #s = s.lower()
 #print ((((s.count('c') + (s.count('g')))) / len(s)) * 100)
 ##########################################
-s: str = input()
-print (len(s))
-k = 0
-i = 1
+s = str(input())
+l = len(s)-1
+k = 1
 n = ''
-ntemp = ''
-while k < (len(s) -1):
-    if (s[k] == s[k+1]):
-        i += 1
-        ntemp = s[k]
-        k += 1
-        continue
-    n += ntemp + str(i)
-    if (s[k] != s[k+1]) and (s[k] != s[k-1]):
-        i = 1
-        ntemp = s[k] + '1'
-        k += 1
-    else:
-        i = 1
-        ntemp = s[k]
-        k += 1
-        continue
-    n += ntemp
+if len(s)==1:
+    n += s+str(k)
+else:
+    for m in range(0,l):
+        if s[m]==s[m+1]:
+            k +=1
+        elif s[m]!=s[m+1]:
+            n += s[m]+str(k)
+            k = 1
+    for h in range(l,l+1):
+        if s[-1]==s[-2]:
+            n += s[h]+str(k)
+        elif s[-1]!=s[-2]:
+            n += s[h]+str(k)
+            k = 1
 print(n)
-
-
-
-
-
-
-
